@@ -134,7 +134,7 @@ if (kol_nowy< kolumn-2 && wie_nowy >0){
   return 0;
  }
 
-export function Square(props) {
+/* export function Square(props) {
   return (
    
     <button className="square" onClick={props.onClick} >
@@ -145,7 +145,7 @@ export function Square(props) {
     
   );
 }
-
+ */
 
 
 /* class Board extends React.Component {

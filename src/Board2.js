@@ -4,7 +4,9 @@ import img_empty from './empty.png';
 import img_visited from './visited.png';
 import img_enabled from './enabled.png';
 import { useAlert } from 'react-alert';
-import { czy_dozwolony_ruch, czy_pozostaly_ruchy, czy_wygrana, Square } from './index';
+//import { czy_dozwolony_ruch, czy_pozostaly_ruchy, czy_wygrana, Square } from './index';
+import { czy_dozwolony_ruch, czy_pozostaly_ruchy, czy_wygrana } from './index';
+import { Square } from './Square';
 import { styles } from './styles.1';
 export const Board2 = props => {
 
