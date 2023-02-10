@@ -1,6 +1,7 @@
 {
   "name": "konik_3",
   "version": "0.1.0",
+  "homepage": "https://peterc98.github.io/chesshorse/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
