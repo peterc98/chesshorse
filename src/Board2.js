@@ -117,7 +117,7 @@ export const Board2 = props => {
     if (a === 0) {
       alert.removeAll();
       //alert.remove()
-      alert.show("ruch niedozwolony", {type: 'error'});
+      alert.show("ruch niedozwolony_2", {type: 'error'});
       // alert("ruch niedozwolony");
       // this.msg.removeAll();
       //  this.msg.error('Move not allowed',{ time:1500, transition:'fade'});
