@@ -40,7 +40,7 @@ export const Board2 = props => {
   }; */
   const handleClickplusk = (event) => {
     event.preventDefault();
-    console.log("kolumn est " + kolumn);
+    //console.log("kolumn est " + kolumn);
     var kolumn_ = kolumn;
     if (kolumn_ < 7)
       kolumn_++;
@@ -56,7 +56,7 @@ export const Board2 = props => {
   const handleClickminusk = () => {
     // event.preventDefault();
     var kolumn_ = kolumn;
-    console.log("kolumn est " + kolumn);
+    //console.log("kolumn est " + kolumn);
     if (kolumn_ > 3)
       kolumn_--;
     var pola = Array(wierszy * kolumn).fill(0);
@@ -115,6 +115,8 @@ export const Board2 = props => {
     let a = czy_dozwolony_ruch(i, aktualne, kolumn, wierszy);
 
     if (a === 0) {
+      alert.removeAll();
+      //alert.remove()
       alert.show("ruch niedozwolony", {type: 'error'});
       // alert("ruch niedozwolony");
       // this.msg.removeAll();
@@ -133,6 +135,7 @@ export const Board2 = props => {
         if (c === 1) { //cx = 1;
           // this.msg.removeAll();
           // this.msg.success('You won - congratulations',{theme:'light'});
+          alert.removeAll();
           alert.show('You won - congratulations' , {type: 'success' });
         } else { // this.msg.removeAll();
           // this.msg.info('Game over - press restart to try again');
