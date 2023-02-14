@@ -1,25 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-//import App from './App';
-//import reportWebVitals from './reportWebVitals';
-//import {Button} from 'react-bootstrap';
-//import AlertContainer from 'react-alert'
-//import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-//import { transitions, positions, Provider as AlertProvider ,withAlert} from 'react-alert'
 import { transitions, positions, Provider as AlertProvider } from 'react-alert'
 import AlertTemplate from 'react-alert-template-basic'
 import { Board2 } from './Board2';
-//import 'bootstrap/dist/css/bootstrap.css';
-//import { styles }  from './styles.js'
 
 const options = {
-  // you can also just use 'bottom center'
   position: positions.BOTTOM_CENTER,
-  
   timeout: 2000,
   offset: '30px',
-  // you can also just use 'scale'
   transition: transitions.SCALE
 }
 
@@ -32,33 +21,7 @@ root.render(
 function App2() {
   return <Board2 />;
 }
-/* class Car extends React.Component {
- 
-  render() {
-    return  (<h2>Hi, I am a Car!</h2>);
-  }
- // shouldComponentUpdate() {return true;}
-} */
 
-/* function Board3 (){
-  return  <Button>3</Button>
-} */
- 
-//ReactDOM.render(
-//  <Button />,
-//  document.getElementById('root')
-//);
-
-//class App extends React.Component {
-//  // constructor() {
-//  //   super();
-//  // }
-//   render() {
-//     return (       
-//           <Board />          
-//     )
-//   }
-// }
 export function czy_dozwolony_ruch( wybr, akt, kolumn, wierszy){
   
   if (akt === -1)
@@ -82,7 +45,6 @@ export function czy_wygrana(pola, aktualne, kolumn, wierszy)
   return 1;
 }
 
-// i oznacza nowy ruch poniżej
 
 function znajdz_wartosc(k,w,pola,kolumn){
   return pola[k+kolumn*w];
@@ -133,43 +95,6 @@ if (kol_nowy< kolumn-2 && wie_nowy >0){
 
   return 0;
  }
-
-/* export function Square(props) {
-  return (
-   
-    <button className="square" onClick={props.onClick} >
-    
-      <img src={props.kolor} alt={props.kolor} onClick={props.onClick}  />
-
-    </button>   
-    
-  );
-}
- */
-
-
-/* class Board extends React.Component {
-  
- 
-  render() {
- 
-    
-    return (
-       
-    
-
-         // <div style={{width: '98%', margin: '0 auto'}}>
-         <div >
-           
-    
-  
-      </div>  
-      
-    )
-  }
-
-  
-} */
 
 
 // If you want to start measuring performance in your app, pass a function

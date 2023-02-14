@@ -1,13 +1,13 @@
 import React, { useState} from 'react';
 import { Button, Badge } from 'react-bootstrap';
-import img_empty from './empty.png';
-import img_visited from './visited.png';
-import img_enabled from './enabled.png';
+import img_empty from './assets/empty.png';
+import img_visited from './assets/visited.png';
+import img_enabled from './assets/enabled.png';
 import { useAlert } from 'react-alert';
-//import { czy_dozwolony_ruch, czy_pozostaly_ruchy, czy_wygrana, Square } from './index';
 import { czy_dozwolony_ruch, czy_pozostaly_ruchy, czy_wygrana } from './index';
 import { Square } from './Square';
 import { styles } from './styles.1';
+
 export const Board2 = props => {
 
   const alert = useAlert();
@@ -19,30 +19,10 @@ export const Board2 = props => {
   //const [wygrana, setWygrana] = useState(0);
   //const [pozostale, setPozostale] = useState(1);
   //const [kolor, setKolor] = useState(img_empty);
-  /*
-  const handleChangek = (event) => {
-    event.preventDefault();
-    var kolumn = event.target.value;
-    setKolumn(kolumn);
-    setAktualne(-1);
-    setKoniec(0);
-    setWygrana(0);
-    setPozostale(1);
-    setKolor(img_empty);
-  };
-  const handleChangew = (event) => {
-    event.preventDefault();
-    var wierszy = event.target.value;
-    setWierszy(wierszy);
-    setAktualne(-1);
-    setKoniec(0);
-    setWygrana(0);
-    setPozostale(1);
-    setKolor(img_empty);
-  }; */
+ 
+
   const handleClickplusk = (event) => {
     event.preventDefault();
-    //console.log("kolumn est " + kolumn);
     var kolumn_ = kolumn;
     if (kolumn_ < 7)
       kolumn_++;
@@ -58,12 +38,11 @@ export const Board2 = props => {
   const handleClickminusk = () => {
     // event.preventDefault();
     var kolumn_ = kolumn;
-    //console.log("kolumn est " + kolumn);
     if (kolumn_ > 3)
       kolumn_--;
     var pola = Array(wierszy * kolumn).fill(0);
     setPola(pola);
-    setKolumn(kolumn_);
+    setKolumn(kolumn_); 
     setAktualne(-1);
    // setKoniec(0);
    // setWygrana(0);
@@ -98,6 +77,8 @@ export const Board2 = props => {
     //setPozostale(1);
     //setKolor(img_empty);
   };
+
+  //reset the game
   const handleClick2 = (event) => {
     //restart gry
     event.preventDefault();
@@ -119,7 +100,7 @@ export const Board2 = props => {
     if (a === 0) {
       alert.removeAll();
       //alert.remove()
-      alert.show("ruch niedozwolony_2", {type: 'error'});
+      alert.show("move not allowed", {type: 'error'});
       // alert("ruch niedozwolony");
       // this.msg.removeAll();
       //  this.msg.error('Move not allowed',{ time:1500, transition:'fade'});
@@ -169,22 +150,6 @@ export const Board2 = props => {
     }
   };
 
-  /* const koniec1 = this.state.koniec;
-   const wygrana1 = this.state.wygrana;
-   
-   if (koniec1)
-     {
-        if (wygrana1) {
-         this.msg.success('You won - congratulations',{theme:'light'});
-          //alert("gra skończona - wygrałeś");
-       }
-       else
-       {
-        // alert("gra skończona - przegrałeś");
-         this.msg.info('Game over - press restart to try again');
-       }
-     //return;
-   }*/
   var rows = [];
   var cells = [];
   var cellNumber = 0;
@@ -220,14 +185,7 @@ export const Board2 = props => {
 
 
       <br />
-
-
       {rows}
-
-
-
-
-
 
     </div>
   );
