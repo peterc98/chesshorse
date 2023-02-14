@@ -26,7 +26,7 @@ export const Board2 = props => {
     var kolumn_ = kolumn;
     if (kolumn_ < 7)
       kolumn_++;
-    var pola = Array(kolumn * wierszy).fill(0);
+    var pola = Array(kolumn_ * wierszy).fill(0);
     setPola(pola);
     setKolumn(kolumn_);
     setAktualne(-1);
@@ -40,7 +40,7 @@ export const Board2 = props => {
     var kolumn_ = kolumn;
     if (kolumn_ > 3)
       kolumn_--;
-    var pola = Array(wierszy * kolumn).fill(0);
+    var pola = Array(wierszy * kolumn_).fill(0);
     setPola(pola);
     setKolumn(kolumn_); 
     setAktualne(-1);
@@ -54,7 +54,7 @@ export const Board2 = props => {
     var wierszy_ = wierszy;
     if (wierszy_ < 7)
       wierszy_++;
-    var pola = Array(wierszy * kolumn).fill(0);
+    var pola = Array(wierszy_ * kolumn).fill(0);
     setPola(pola);
     setWierszy(wierszy_);
     setAktualne(-1);
@@ -68,7 +68,7 @@ export const Board2 = props => {
     var wierszy_ = wierszy;
     if (wierszy_ > 3)
       wierszy_--;
-    var pola = Array(wierszy * kolumn).fill(0);
+    var pola = Array(wierszy_ * kolumn).fill(0);
     setPola(pola);
     setWierszy(wierszy_);
     setAktualne(-1);
