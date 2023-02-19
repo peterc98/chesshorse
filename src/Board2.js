@@ -93,7 +93,7 @@ export const Board2 = props => {
 
   const handleClick = (i) => {
     // const alert = useAlert()
-    //let pola = pola.slice();
+    let pola_ = pola.slice();
    // let kon = 0;
     let a = czy_dozwolony_ruch(i, aktualne, kolumn, wierszy);
 
@@ -107,13 +107,13 @@ export const Board2 = props => {
       return false;
     } else {
       //sprawdz czy są walne ruchy, jęsli nie to koniec = 1
-      let b = czy_pozostaly_ruchy(i, pola, kolumn, wierszy);
+      let b = czy_pozostaly_ruchy(i, pola_, kolumn, wierszy);
       //let c = 0;
 
       if (b === 0) {
        // kon = 1; //sprawd czy wszystkie pola są 1, jesli nie to wygrana = 0; tak = 1;
 
-        let c = czy_wygrana(pola, i, kolumn, wierszy); //alert("c jest "+c);
+        let c = czy_wygrana(pola_, i, kolumn, wierszy); //alert("c jest "+c);
 
         if (c === 1) { //cx = 1;
           // this.msg.removeAll();
@@ -126,9 +126,9 @@ export const Board2 = props => {
         }
       }
 
-      if (pola[i] === 0) {
-        pola[i] = pola[i] + 1;
-        setPola(pola);
+      if (pola_[i] === 0) {
+        pola_[i] = pola_[i] + 1;
+        setPola(pola_);
         setAktualne(i);
        // setPozostale(b);
        // setKoniec(kon);
